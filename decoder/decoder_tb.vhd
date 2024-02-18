@@ -1,39 +1,52 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
+ENTITY bench IS
+END bench;
 
+ARCHITECTURE bench OF bench IS
+    SIGNAL A0, A1, E, Y3, Y2, Y1, Y0 : STD_LOGIC;
 
-entity dec3x8_conditional_test is
-end dec3x8_conditional_test;
+    COMPONENT test
+        PORT(A0, A1, E: IN STD_LOGIC;
+             Y3, Y2, Y1, Y0: OUT STD_LOGIC);
+    END COMPONENT;
 
-architecture behavior of dec3x8_conditional_test is
---signal declarations.
-signal input : std_logic_vector(2 downto 0) :=(others => '0');
-signal output :  std_logic_vector(7 downto 0) :=(others => '0');
+BEGIN
+    UUT: test
+    PORT MAP(A0 => A0, A1 => A1, E => E, Y3 => Y3, Y2 => Y2, Y1 => Y1, Y0 => Y0);
 
-begin
---entity instantiation
-UUT : entity work.dec3x8_conditional port map(input,output);
+    -- Stimulus process
+    stimulus_process: PROCESS
+    BEGIN
+        -- Test case 1
+        A0<='0';
+        A1<='0';
+        E<='1';
+        WAIT FOR 10 ns;
 
---definition of simulation process
-tb : process 
-begin
-input<="000";  --input = 0.
-wait for 2 ns;
-input<="001";   --input = 1.
-wait for 2 ns;
-input<="010";   --input = 2.
-wait for 2 ns;
-input<="011";   --input = 3.
-wait for 2 ns;
-input<="100";   --input = 4.
-wait for 2 ns;
-input<="101";   --input = 5.
-wait for 2 ns;
-input<="110";   --input = 6.
-wait for 2 ns;
-input<="111";   --input = 7.
-wait;
-end process tb;
+        -- Test case 2
+        A0<='1';
+        A1<='0';
+        E<='1';
+        WAIT FOR 10 ns;
 
-end;
+        -- Test case 3
+        A0<='0';
+        A1<='1';
+        E<='1';
+        WAIT FOR 10 ns;
+
+        -- Test case 4
+        A0<='1';
+        A1<='1';
+        E<='1';
+        WAIT FOR 10 ns;
+
+        -- End simulation
+        WAIT;
+    END PROCESS stimulus_process;
+
+END bench;
