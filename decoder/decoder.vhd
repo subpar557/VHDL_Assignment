@@ -1,23 +1,16 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library	ieee;
+use	IEEE.STD_LOGIC_1164.ALL;
 
-entity dec3x8_conditional is
-port(x:in STD_LOGIC_VECTOR(2 downto 0);
-     y:out STD_LOGIC_VECTOR(7 downto 0));
+ENTITY	test	IS 
+    PORT(A1,A0,E:	IN	STD_LOGIC;
+        Y3,Y2,Y1,Y0:	OUT	STD_LOGIC
+    );
+END	test;
 
-end dec3x8_conditional;
-
-architecture behavioral of dec3x8_conditional is
-begin
-  y  <=        "00000001" when (x="000") else
-               "00000010" when (x="001") else
-               "00000100" when (x="010") else
-               "00001000" when (x="011") else
-               "00010000" when (x="100") else
-               "00100000" when (x="101") else
-               "01000000" when (x="110") else
-               "10000000" when (x="111") else
-               "XXXXXXXX";
-end architecture;
+ARCHITECTURE	test	OF	test	IS 
+	BEGIN
+        Y3	<=	E	AND	A1	AND	A0;
+        Y2	<=	E	AND	A1	AND	(NOT	A0);
+        Y1	<=	E	AND	(NOT	A1)	AND	A0;
+        Y0	<=	E	AND	(NOT	A1)	AND	(NOT	A0);
+END	test;
