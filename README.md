@@ -21,6 +21,7 @@ Describe how to run the test cases using GHDL and how to visualize waveforms wit
 # Example command for running GHDL
 ghdl -a your_test_bench.vhd <br>
 ghdl -e your_test_bench <br>
-ghdl -r your_test_bench --wave=wave.ghw <br>
+ghdl -r your_test_bench <br>
+--wave=wave.ghw <br>
 # Example command for GTKWave <br>
 gtkwave wave.ghw
