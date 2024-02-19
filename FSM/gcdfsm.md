@@ -1,2 +1,3 @@
 
-![GCD NEW](https://github.com/subpar557/VHDL_Assignment/assets/159637302/3316ba6f-8867-4236-8a03-141090de8eca)
+![gcddddd](https://github.com/subpar557/VHDL_Assignment/assets/159637302/21de30c5-3f80-4fa6-9284-a6269d3416b5)
+
