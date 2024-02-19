@@ -6,8 +6,8 @@ This repository contains VHDL code and test cases for embedded system assignment
 Ensure you have the following software installed on your system:
 
 GHDL <br>
-GTKWave
-Notepad++
+GTKWave <br>
+Notepad++ <br>
 
 # Installing GHDL
 Follow the instructions on the GHDL GitHub repository to install GHDL on your system.
@@ -19,8 +19,8 @@ Running Test Cases
 Describe how to run the test cases using GHDL and how to visualize waveforms with GTKWave.
 
 # Example command for running GHDL
-ghdl -a your_test_bench.vhd 
-ghdl -e your_test_bench
-ghdl -r your_test_bench --wave=wave.ghw
-# Example command for GTKWave
+ghdl -a your_test_bench.vhd <br>
+ghdl -e your_test_bench <br>
+ghdl -r your_test_bench --wave=wave.ghw <br>
+# Example command for GTKWave <br>
 gtkwave wave.ghw
