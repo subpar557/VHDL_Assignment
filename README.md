@@ -5,7 +5,7 @@ This repository contains VHDL code and test cases for embedded system assignment
 # Prerequisites
 Ensure you have the following software installed on your system:
 
-GHDL
+GHDL :-
 GTKWave
 Notepad++
 
