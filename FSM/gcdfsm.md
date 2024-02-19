@@ -1,1 +1,2 @@
-![gcd fsm](https://github.com/subpar557/VHDL_Assignment/assets/159637302/374a7f89-abff-49d4-a87c-69fba1f42e80)
+
+![GCD NEW](https://github.com/subpar557/VHDL_Assignment/assets/159637302/3316ba6f-8867-4236-8a03-141090de8eca)
