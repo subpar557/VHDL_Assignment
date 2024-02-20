@@ -1,2 +1,3 @@
 
-![d flipflop](https://github.com/subpar557/VHDL_Assignment/assets/159637302/fe71a654-30a4-44b2-a751-63a33d62e5a7)
+
+![d flipflop](https://github.com/subpar557/VHDL_Assignment/assets/159637302/333801b0-f24d-4d5b-a51a-faa211226fd1)
